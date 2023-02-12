@@ -44,7 +44,4 @@ public class StudyDashboard {
         studyDashboard.printParticipants(15);
     }
 
-
-
-
 }
