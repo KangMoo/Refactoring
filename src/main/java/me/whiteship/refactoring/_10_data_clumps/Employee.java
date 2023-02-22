@@ -4,41 +4,36 @@ public class Employee {
 
     private String name;
 
-    private String personalAreaCode;
+    private TelephoneNumber personalPhoneNumber;
 
-    private String personalNumber;
-
-    public Employee(String name, String personalAreaCode, String personalNumber) {
+    public Employee(String name, TelephoneNumber personalPhoneNumber) {
         this.name = name;
-        this.personalAreaCode = personalAreaCode;
-        this.personalNumber = personalNumber;
+        this.personalPhoneNumber = personalPhoneNumber;
     }
 
-    public String personalPhoneNumber() {
-        return personalAreaCode + "-" + personalNumber;
+    public String getAreaCode() {
+        return personalPhoneNumber.getAreaCode();
+    }
+
+    public String getNumber() {
+        return personalPhoneNumber.getNumber();
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public Employee setName(String name) {
         this.name = name;
+        return this;
     }
 
-    public String getPersonalAreaCode() {
-        return personalAreaCode;
+    public TelephoneNumber getPersonalPhoneNumber() {
+        return personalPhoneNumber;
     }
 
-    public void setPersonalAreaCode(String personalAreaCode) {
-        this.personalAreaCode = personalAreaCode;
-    }
-
-    public String getPersonalNumber() {
-        return personalNumber;
-    }
-
-    public void setPersonalNumber(String personalNumber) {
-        this.personalNumber = personalNumber;
+    public Employee setPersonalPhoneNumber(TelephoneNumber personalPhoneNumber) {
+        this.personalPhoneNumber = personalPhoneNumber;
+        return this;
     }
 }
